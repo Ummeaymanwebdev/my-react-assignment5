@@ -1,35 +1,60 @@
-# React + TypeScript + Vite
+# Dev Stack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Description
 
-Currently, two official plugins are available:
+Its a React app where i can explore frontend, backend, database, language, styling, DevOps and tooling options, then pick the ones i like to build my own ideal development stack. The technology data is loaded from a JSON file.Users can view technology details and add, remove, or manage their selected technologies in a personal stack.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+Technologies Used
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+React
+TypeScript
+Tailwind CSS
+React Toastify
+Vite
+Features
+JSON 
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+Features
 
-## Expanding the Oxlint configuration
+Browse development technologies in a responsive card grid 
+Build a personalized technology stack in the "Your Stack" sidebar, with duplicates blocked
+Add and remove technologies dynamically, including a "Remove All" button.
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Question Answer 
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+1. What is JSX, and why is it used in React?
+   ans: JSX is a syntax that used in React.And its help to write HTML code inside JavaScript or TypeScript.
+   It makes React code easier to read and write because we can describe the UI directly inside the component
+
+2. What is the difference between props and state?
+   ans:Props are used to pass data from a parent component to a child component and Props are read-only.
+   State is used to store data inside a component and State can be updated.
+
+3. What does the useState hook do, and where did you use it in this project?
+   ans:The useState hook is used to create and manage state inside a React component.When the state changes, React              re-renders the component to show the updated data.
+   In this project, I used useState in App.tsx to manage the selected technologies in the Your Stack section.
+
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+   ans: useEffect is used to handle side effects in React. I used it to load the JSON data when the component mounted and       store the data in state.so it could be displayed in the technology cards.
+
+5. Why does every item in a .map() list need a unique key prop?
+   ans:A unique key prop helps react identify each list item and efficiently update the UI when the list changes.
+
+6. What is conditional rendering?
+   ans:Conditional rendering means displaying ui elements based on a condition. In my project, the Remove all button is         shown only when the stack has at least one technology.
+
+7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+   ans: We pass data from parent to child using props.A child communicates back to the parent by calling a function passed      from the parent as a prop.
+
+
+
+
+
+
+
+
+
+
+
